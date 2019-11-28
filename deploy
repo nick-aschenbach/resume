@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# fail on anything
+set -e
+
+# build the app
+react-scripts build
+
+# deploy it
+cd build
+aws s3 cp . s3://drift.video --recursive
+cd ..
