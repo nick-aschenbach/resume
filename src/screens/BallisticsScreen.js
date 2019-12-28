@@ -4,12 +4,10 @@ import { WIDTH, DEPTH } from '../lib/ballistics/Parameters'
 import Ballistic from '../lib/ballistics/Ballistic'
 import EjectedMaterial from '../lib/ballistics/EjectedMaterial'
 import ReactTooltip from 'react-tooltip'
-
-const THREE = require('three')
-const { OrbitControls } = require('../lib/ballistics/OrbitControls')
-
-const laserImage = require('../assets/experiments/laser.png')
-const dirtImage = require('../assets/experiments/dirt.jpg')
+import {OrbitControls} from '../lib/ballistics/OrbitControls'
+import * as THREE from 'three'
+import * as laserImage from '../assets/experiments/laser.png'
+import * as dirtImage from '../assets/experiments/dirt.jpg'
 
 const DEBUG = false
 

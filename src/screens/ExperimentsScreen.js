@@ -1,4 +1,5 @@
 import React from 'react'
+import { useHistory } from 'react-router-dom'
 
 import Container from '@material-ui/core/Container'
 import GridListTile from '@material-ui/core/GridListTile'
@@ -12,8 +13,6 @@ import terrain2 from '../assets/experiments/simplex-terrain.png'
 import plasma from '../assets/experiments/plasma.png'
 import arkanoid from '../assets/experiments/arkanoid.png'
 import ballistic from '../assets/experiments/ballistic.png'
-
-import { useHistory } from 'react-router-dom'
 
 const useStyles = makeStyles(() => ({
   root: {

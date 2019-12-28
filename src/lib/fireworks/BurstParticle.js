@@ -1,4 +1,4 @@
-import Gradients from './Gradients'
+import Gradients from '../Gradients'
 import uuid from 'uuid'
 
 class BurstParticle {

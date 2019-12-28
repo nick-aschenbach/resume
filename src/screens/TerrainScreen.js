@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ReactTooltip from 'react-tooltip'
-
 import SimplexNoise from 'simplex-noise'
+import * as THREE from 'three'
 
-const water = require('../assets/experiments/water-bump.jpg')
-
-const THREE = require('three')
+import * as water from '../assets/experiments/water-bump.jpg'
 
 const simplex = new SimplexNoise(Math.random)
 
@@ -146,13 +144,14 @@ export default function TerrainScreen () {
 
   return (
     <div id='terrainTarget'>
-      <div style={{ position: 'fixed', left: 25, bottom: 50 }}>
+      <div style={{ position: 'fixed', left: 25, bottom: 50, color: 'yellow' }}>
         <p data-tip='React-tooltip'>Info</p>
         <ReactTooltip place='right' type='dark' effect='solid'>This experiment uses a Simplex-Noise generator to create
-          a 3D array of points. A lookup is performed at each <code>(x, y)</code> point using the <code>simplex.noise2D</code>
-          function to calculate the height <code>(z)</code>. The Simplex Noise algorithm is similar to Perlin noise, but
-          does not have some of the same directional artifacts. The grid of <code>(x, y, z)</code> points is used to
-          generate a THREE.js mesh. The lights and textured semi-transparent water are added for effect.
+          a 3D array of points. A lookup is performed at each <code>(x, y)</code> point using the
+          <code>simplex.noise2D</code> function to calculate the height <code>(z)</code>. The Simplex Noise algorithm
+          is similar to Perlin noise, but does not have some of the same directional artifacts. The grid of
+          <code>(x, y, z)</code> points is used to generate a THREE.js mesh. The lights and textured semi-transparent
+          water are added for effect.
         </ReactTooltip>
       </div>
     </div>
