@@ -13,6 +13,7 @@ import terrain2 from '../assets/experiments/simplex-terrain.png'
 import plasma from '../assets/experiments/plasma.png'
 import arkanoid from '../assets/experiments/arkanoid.png'
 import ballistic from '../assets/experiments/ballistic.png'
+import mandelbrot from '../assets/experiments/mandelbrot.png'
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -60,6 +61,11 @@ const tileData = [
     img: ballistic,
     title: 'Ballistics Simulator',
     route: 'Ballistics Simulator'
+  },
+  {
+    img: mandelbrot,
+    title: 'Mandelbrot Fractal',
+    route: 'Mandelbrot Fractal'
   }
 ]
 

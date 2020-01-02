@@ -19,12 +19,13 @@ import MenuIcon from '@material-ui/icons/Menu'
 import HomeScreen from './screens/HomeScreen'
 import LinksScreen from './screens/LinksScreen'
 import ExperimentsScreen from './screens/ExperimentsScreen'
-import FireworkScreen from './screens/FireworkScreen'
-import PlasmaScreen from './screens/PlasmaScreen'
-import HeightFieldScreen from './screens/HeightFieldScreen'
-import ArkanoidScreen from './screens/ArkanoidScreen'
-import TerrainScreen from './screens/TerrainScreen'
-import BallisticsScreen from './screens/BallisticsScreen'
+import FireworkScreen from './screens/experiments/FireworkScreen'
+import PlasmaScreen from './screens/experiments/PlasmaScreen'
+import HeightFieldScreen from './screens/experiments/HeightFieldScreen'
+import ArkanoidScreen from './screens/experiments/ArkanoidScreen'
+import TerrainScreen from './screens/experiments/TerrainScreen'
+import BallisticsScreen from './screens/experiments/BallisticsScreen'
+import MandelbrotScreen from './screens/experiments/MandelbrotScreen'
 
 import useGlobal from './lib/store'
 
@@ -106,6 +107,7 @@ export default function App () {
       'Arkanoid Game Levels': <ArkanoidScreen />,
       'WebGL Terrain Generator': <TerrainScreen />,
       'Ballistics Simulator': <BallisticsScreen />,
+      'Mandelbrot Fractal': <MandelbrotScreen />,
       Links: <LinksScreen />
     }
 

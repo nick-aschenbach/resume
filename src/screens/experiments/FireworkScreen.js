@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 
-import FireworkJetParticle from '../lib/fireworks/FireworkJetParticle'
-import BurstParticle from '../lib/fireworks/BurstParticle'
-import FireworkParticle from '../lib/fireworks/FireworkParticle'
-import Gradients from '../lib/Gradients'
-import '../css/App.css'
+import FireworkJetParticle from '../../lib/fireworks/FireworkJetParticle'
+import BurstParticle from '../../lib/fireworks/BurstParticle'
+import FireworkParticle from '../../lib/fireworks/FireworkParticle'
+import Gradients from '../../lib/Gradients'
+import '../../css/App.css'
 
 const MAX_PARTICLES = 250
 

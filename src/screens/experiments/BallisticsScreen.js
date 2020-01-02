@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react'
-import sidesAndBottom from '../lib/ballistics/NonSurfaceBox'
-import { WIDTH, DEPTH } from '../lib/ballistics/Parameters'
-import Ballistic from '../lib/ballistics/Ballistic'
-import EjectedMaterial from '../lib/ballistics/EjectedMaterial'
+import sidesAndBottom from '../../lib/ballistics/NonSurfaceBox'
+import { WIDTH, DEPTH } from '../../lib/ballistics/Parameters'
+import Ballistic from '../../lib/ballistics/Ballistic'
+import EjectedMaterial from '../../lib/ballistics/EjectedMaterial'
 import ReactTooltip from 'react-tooltip'
-import {OrbitControls} from '../lib/ballistics/OrbitControls'
+import {OrbitControls} from '../../lib/ballistics/OrbitControls'
 import * as THREE from 'three'
-import * as laserImage from '../assets/experiments/laser.png'
-import * as dirtImage from '../assets/experiments/dirt.jpg'
+import * as laserImage from '../../assets/experiments/laser.png'
+import * as dirtImage from '../../assets/experiments/dirt.jpg'
 
 const DEBUG = false
 

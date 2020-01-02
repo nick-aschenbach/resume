@@ -8,5 +8,6 @@ react-scripts build
 
 # deploy it
 cd build
+aws s3 rm s3://drift.video/ --recursive
 aws s3 cp . s3://drift.video --recursive
 cd ..

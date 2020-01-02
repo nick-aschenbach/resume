@@ -3,7 +3,7 @@ import ReactTooltip from 'react-tooltip'
 import SimplexNoise from 'simplex-noise'
 import * as THREE from 'three'
 
-import * as water from '../assets/experiments/water-bump.jpg'
+import * as water from '../../assets/experiments/water-bump.jpg'
 
 const simplex = new SimplexNoise(Math.random)
 
