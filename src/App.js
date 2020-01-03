@@ -9,6 +9,7 @@ import Person from '@material-ui/icons/Person'
 import Star from '@material-ui/icons/Star'
 
 import { useHistory } from 'react-router-dom'
+import ReactGA from 'react-ga'
 
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
@@ -38,11 +39,19 @@ const useStyles = makeStyles({
   }
 })
 
+const trackingId = 'G-YXED3Q8EME' // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId)
+
 export default function App () {
   const classes = useStyles()
   const [globalState, globalActions] = useGlobal()
 
   const history = useHistory()
+  history.listen(() => {
+    const page = getRoute()
+    ReactGA.set({ page });
+    ReactGA.pageview(page);
+  });
 
   const toggleDrawer = openOrClose => event => {
     if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
@@ -66,8 +75,8 @@ export default function App () {
             history.push('?route=Nick Aschenbach')
           }}
         >
-          <ListItemIcon><Person /></ListItemIcon>
-          <ListItemText primary='Profile' />
+          <ListItemIcon><Person/></ListItemIcon>
+          <ListItemText primary='Profile'/>
         </ListItem>
       </List>
       <List>
@@ -77,8 +86,8 @@ export default function App () {
             history.push('?route=Links')
           }}
         >
-          <ListItemIcon><Person /></ListItemIcon>
-          <ListItemText primary='Links' />
+          <ListItemIcon><Person/></ListItemIcon>
+          <ListItemText primary='Links'/>
         </ListItem>
       </List>
       <List>
@@ -88,8 +97,8 @@ export default function App () {
             history.push('?route=Experiments')
           }}
         >
-          <ListItemIcon><Star /></ListItemIcon>
-          <ListItemText primary='Experiments' />
+          <ListItemIcon><Star/></ListItemIcon>
+          <ListItemText primary='Experiments'/>
         </ListItem>
       </List>
     </div>
@@ -99,16 +108,16 @@ export default function App () {
     const route = getRoute()
 
     const map = {
-      'Nick Aschenbach': <HomeScreen />,
-      Experiments: <ExperimentsScreen />,
-      'Firework Simulator': <FireworkScreen />,
-      'Wireframe Fractal Terrain Video': <HeightFieldScreen />,
-      'Plasma Simulator Video': <PlasmaScreen />,
-      'Arkanoid Game Levels': <ArkanoidScreen />,
-      'WebGL Terrain Generator': <TerrainScreen />,
-      'Ballistics Simulator': <BallisticsScreen />,
-      'Mandelbrot Fractal': <MandelbrotScreen />,
-      Links: <LinksScreen />
+      'Nick Aschenbach': <HomeScreen/>,
+      Experiments: <ExperimentsScreen/>,
+      'Firework Simulator': <FireworkScreen/>,
+      'Wireframe Fractal Terrain Video': <HeightFieldScreen/>,
+      'Plasma Simulator Video': <PlasmaScreen/>,
+      'Arkanoid Game Levels': <ArkanoidScreen/>,
+      'WebGL Terrain Generator': <TerrainScreen/>,
+      'Ballistics Simulator': <BallisticsScreen/>,
+      'Mandelbrot Fractal': <MandelbrotScreen/>,
+      Links: <LinksScreen/>
     }
 
     return map[route]
@@ -133,7 +142,7 @@ export default function App () {
             aria-label='menu'
             onClick={toggleDrawer(true)}
           >
-            <MenuIcon />
+            <MenuIcon/>
           </IconButton>
           <Typography variant='h6' className={classes.title}>{getRoute()}</Typography>
         </Toolbar>
