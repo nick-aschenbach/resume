@@ -2,6 +2,9 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import { Remarkable } from 'remarkable'
 
+import resume from '../assets/aschenbach-resume-2019.pdf'
+import pdf from '../assets/pdf.png'
+
 const md = new Remarkable()
 
 const input = `
@@ -91,7 +94,8 @@ export default function HomeScreen () {
   return (
     <div>
       <Container maxWidth='md'>
-        <div dangerouslySetInnerHTML={{ __html: md.render(input) }} />
+        <div dangerouslySetInnerHTML={{ __html: md.render(input) }}/>
+        <a href={resume}><img src={pdf} style={{width: '70px', left: '10px'}}/></a>
       </Container>
     </div>
   )
