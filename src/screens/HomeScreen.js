@@ -2,7 +2,7 @@ import React from 'react'
 import Container from '@material-ui/core/Container'
 import { Remarkable } from 'remarkable'
 
-import resume from '../assets/aschenbach-resume-2019.pdf'
+import resume from '../assets/aschenbach-resume-2020.pdf'
 import pdf from '../assets/pdf.png'
 
 const md = new Remarkable()
@@ -28,8 +28,6 @@ Instead of going to multiple provider portals, we enabled claims/bills to flow i
 users to pay all of their medical bills in one place. The app was supported by our talented billing specialists, who 
 advocated for and helped users to understand their medical bills. Predominantly, I focused on the back-end part of the 
 app on writing multiple microservices.
-
-I developed a payment application for medical claims that provides insights for how users can save money. Instead of going to multiple provider portals, we allowed all these claims/bills to flow into the app. This allowed users to pay all of their medical bills in one place. The app was supported by our talented billing specialists, who help to understand medical bills and advocate for the user. Predominantly, I focused on the back-end part of the app running multiple microservices.
 
 - Developed insights for bills employing medical expert knowledge and data science techniques
 - Engineered RESTful APIs using Node.js on the back-end (express, sequelize, Cognito/JWT-based auth, jest)
